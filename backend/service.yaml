@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: solog-backend-service
+  namespace: default
+spec:
+  type: LoadBalancer
+  selector:
+    app: solog-backend
+  ports:
+    - protocol: TCP
+      port: 80     
+      targetPort: 8080
