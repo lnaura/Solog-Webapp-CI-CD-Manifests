@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: solog-backend
+  name: solog-frontend      
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io 
@@ -10,10 +10,10 @@ spec:
   source:
     repoURL: https://github.com/lnaura/Solog-Webapp-CI-CD-Manifests.git 
     targetRevision: HEAD
-    path: backend
+    path: frontend          
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: default     
   syncPolicy:
     automated:
       prune: true    
