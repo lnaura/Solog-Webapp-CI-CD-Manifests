@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: solog-backend
-          image: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-backend:5eb872089c18507d046b1ec944eb4f084c6d8d1f
+          image: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-backend:be07e30e7edb5ef6c7a041d203847a43389c477b
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
