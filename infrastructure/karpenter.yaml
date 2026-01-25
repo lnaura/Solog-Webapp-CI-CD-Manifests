@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: karpenter
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: oci://public.ecr.aws/karpenter/karpenter
+    targetRevision: 1.0.1
+    chart: karpenter
+    helm:
+      releaseName: karpenter
+      values: |
+        serviceAccount:
+          create: true
+          name: karpenter
+          annotations:
+            # Terraform output에서 얻은 karpenter_controller_role_arn 입력
+            eks.amazonaws.com/role-arn: "arn:aws:iam::<계정ID>:role/karpenter-controller-role-gitops-cluster"
+        
+        settings:
+          clusterName: "gitops-cluster" # Terraform의 cluster_name과 일치
+          # Terraform의 queue_name과 일치
+          interruptionQueue: "gitops-cluster-karpenter-queue"
+          
+        # 컨트롤러가 실행될 노드 선택 (보통 기본 매니지드 노드 그룹에 배치)
+        controller:
+          resources:
+            requests:
+              cpu: 1
+              memory: 1Gi
+            limits:
+              cpu: 1
+              memory: 1Gi
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kube-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
