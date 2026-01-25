@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metrics-server
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://kubernetes-sigs.github.io/metrics-server/ # 공식 Helm 저장소
+    targetRevision: 3.12.1 # 원하는 버전 지정
+    chart: metrics-server
+    helm:
+      valueFiles:
+        - values.yaml # 필요한 경우 커스텀 설정 가능
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kube-system
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
