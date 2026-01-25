@@ -29,11 +29,11 @@ spec:
             - containerPort: 80
           resources:
             requests:
-              memory: "1Gi"
-              cpu: "1"
+              memory: "64Mi"
+              cpu: "50m"
             limits:
-              memory: "1Gi"
-              cpu: "1"
+              memory: "128Mi"
+              cpu: "100m"
           # 헬스 체크 (Nginx가 잘 떠있는지 확인)
           livenessProbe:
             httpGet:
