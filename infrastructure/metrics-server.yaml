@@ -10,8 +10,10 @@ spec:
     targetRevision: 3.12.1 # 원하는 버전 지정
     chart: metrics-server
     helm:
-      valueFiles:
-        - values.yaml # 필요한 경우 커스텀 설정 가능
+      values: |
+        args:
+          - --kubelet-insecure-tls
+          - --kubelet-preferred-address-types=InternalIP
   destination:
     server: https://kubernetes.default.svc
     namespace: kube-system
