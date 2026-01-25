@@ -6,7 +6,6 @@ metadata:
   namespace: default
 spec:
   amiFamily: AL2
-  # Terraform에서 만든 KarpenterNodeRole 이름과 일치해야 함
   role: "KarpenterNodeRole-gitops-cluster-20260125074334397900000005"
   subnetSelectorTerms:
     - tags:
@@ -26,7 +25,7 @@ spec:
       requirements:
         - key: "karpenter.sh/capacity-type"
           operator: In
-          values: ["spot", "on-demand"] # 비용 효율을 위해 Spot 우선 사용 권장
+          values: ["spot", "on-demand"]
         - key: "kubernetes.io/arch"
           operator: In
           values: ["amd64"]
