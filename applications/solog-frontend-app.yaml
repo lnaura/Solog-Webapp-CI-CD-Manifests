@@ -13,7 +13,13 @@ spec:
     path: frontend          
   destination:
     server: https://kubernetes.default.svc
-    namespace: default     
+    namespace: default   
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: frontend
+      jsonPointers:
+        - /spec/replicas  
   syncPolicy:
     automated:
       prune: true    

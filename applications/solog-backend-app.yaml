@@ -14,6 +14,12 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: default
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: solog-backend 
+      jsonPointers:
+        - /spec/replicas
   syncPolicy:
     automated:
       prune: true    
