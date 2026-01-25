@@ -2,8 +2,7 @@
 apiVersion: karpenter.k8s.aws/v1beta1
 kind: EC2NodeClass
 metadata:
-  name: karpenter-ec2-node-class
-  namespace: default
+  name: default
 spec:
   amiFamily: AL2
   role: "KarpenterNodeRole-gitops-cluster-20260125074334397900000005"
@@ -17,8 +16,7 @@ spec:
 apiVersion: karpenter.sh/v1beta1
 kind: NodePool
 metadata:
-  name: kapenter-nodepool
-  namespace: default
+  name: default
 spec:
   template:
     spec:
