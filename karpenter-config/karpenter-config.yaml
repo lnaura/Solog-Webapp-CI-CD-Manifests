@@ -34,4 +34,5 @@ spec:
         name: default
   disruption:
     consolidationPolicy: WhenUnderutilized
+    consolidateAfter: 30s
     expireAfter: 720h
