@@ -6,7 +6,7 @@ metadata:
 spec:
   amiFamily: AL2
   # Terraform에서 만든 KarpenterNodeRole 이름과 일치해야 함
-  role: "KarpenterNodeRole-gitops-cluster"
+  role: "KarpenterNodeRole-gitops-cluster-20260125074334397900000005"
   subnetSelectorTerms:
     - tags:
         karpenter.sh/discovery: "gitops-cluster"

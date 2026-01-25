@@ -17,7 +17,7 @@ spec:
           name: karpenter
           annotations:
             # Terraform output에서 얻은 karpenter_controller_role_arn 입력
-            eks.amazonaws.com/role-arn: "arn:aws:iam::<계정ID>:role/karpenter-controller-role-gitops-cluster"
+            eks.amazonaws.com/role-arn: "arn:aws:iam::215572961831:role/KarpenterController-20260125074334619700000006"
         
         settings:
           clusterName: "gitops-cluster" # Terraform의 cluster_name과 일치
