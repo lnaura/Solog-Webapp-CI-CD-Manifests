@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: oci://public.ecr.aws/karpenter/karpenter-crd
+    repoURL: public.ecr.aws/karpenter
     targetRevision: 1.0.1 
     chart: karpenter-crd
   destination:
