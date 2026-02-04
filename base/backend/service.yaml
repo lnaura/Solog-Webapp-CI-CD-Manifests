@@ -4,7 +4,7 @@ metadata:
   name: solog-backend-service
   namespace: default
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: solog-backend
   ports:
