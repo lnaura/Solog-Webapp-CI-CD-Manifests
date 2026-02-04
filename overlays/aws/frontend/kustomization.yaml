@@ -6,3 +6,8 @@ resources:
 
 patches:
   - path: ingress-patch.yaml
+
+images:
+  - name: solog-frontend
+    newName: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/solog-frontend
+    newTag: latest  # 이 태그는 CI가 나중에 업데이트합니다.

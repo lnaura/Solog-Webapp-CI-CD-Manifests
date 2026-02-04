@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: solog-backend
-          image: sologregistry000807.azurecr.io/solog-backend:eabf4117e5941e84a8ebd797f72b1e0ebcafe857
+          image: solog-backend
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

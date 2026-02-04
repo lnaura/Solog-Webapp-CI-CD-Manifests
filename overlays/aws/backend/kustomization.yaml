@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
   - ../../../base/backend
+
+images:
+  - name: solog-backend
+    newName: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/solog-backend
+    newTag: latest  # 이 태그는 CI가 나중에 업데이트합니다.
