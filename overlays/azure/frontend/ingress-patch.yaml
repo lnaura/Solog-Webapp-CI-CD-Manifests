@@ -1,0 +1,12 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: frontend-ingress
+  annotations:
+    # 1. 인그레스 클래스 지정 (AKS에서 설정한 값에 따라 선택)
+    # Nginx를 쓰신다면: nginx / Application Gateway를 쓰신다면: azure/application-gateway
+    kubernetes.io/ingress.class: nginx 
+    
+    # 2. Azure 전용 설정 예시 (필요시 추가)
+    # cert-manager 등을 사용한다면 여기에 관련 어노테이션을 넣습니다.
+    # nginx.ingress.kubernetes.io/ssl-redirect: "false"

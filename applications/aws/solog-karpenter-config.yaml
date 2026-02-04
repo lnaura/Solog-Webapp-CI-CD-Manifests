@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: solog-backend
+  name: karpenter-config
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io 
@@ -10,16 +10,10 @@ spec:
   source:
     repoURL: https://github.com/lnaura/Solog-Webapp-CI-CD-Manifests.git 
     targetRevision: HEAD
-    path: backend
+    path: overlays/aws/karpenter-config
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
-  ignoreDifferences:
-    - group: apps
-      kind: Deployment
-      name: solog-backend 
-      jsonPointers:
-        - /spec/replicas
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true    
