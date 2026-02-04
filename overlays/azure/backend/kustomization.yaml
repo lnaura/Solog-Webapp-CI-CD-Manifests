@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
 - ../../../base/backend
+- ingress-patch.yaml
 
 images:
 - name: solog-backend
