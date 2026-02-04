@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
 - nginx-ingress.yaml
+- ingress-ns.yaml
