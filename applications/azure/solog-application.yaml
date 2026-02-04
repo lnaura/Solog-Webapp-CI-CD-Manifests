@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: solog-application
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io 
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/lnaura/Solog-Webapp-CI-CD-Manifests.git 
+    targetRevision: HEAD
+    path: overlays/azure/application
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      name: solog-backend 
+      jsonPointers:
+        - /spec/replicas
+  syncPolicy:
+    automated:
+      prune: true    
+      selfHeal: true   
+    syncOptions:
+      - CreateNamespace=true
