@@ -23,7 +23,7 @@ spec:
       containers:
         - name: frontend
           # 아래 이미지는 GitHub Actions가 sed 명령어로 자동 교체합니다.
-          image: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-frontend:a462d02182cf76c8f3035aa5077ede69a870ad43
+          image: sologregistry000807.azurecr.io/solog-frontend:d9bdc35cd57e24ec44b493c1beb4e811a2ab3e08
           imagePullPolicy: Always
           ports:
             - containerPort: 80
