@@ -11,6 +11,9 @@ spec:
     targetRevision: 4.10.0 
     helm:
       releaseName: ingress-nginx
+      parameters:
+        - name: "controller.service.externalTrafficPolicy"
+          value: "Cluster"
   destination:
     server: https://kubernetes.default.svc
     namespace: ingress-basic 
