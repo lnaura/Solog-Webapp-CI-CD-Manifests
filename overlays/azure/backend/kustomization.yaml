@@ -8,4 +8,4 @@ resources:
 images:
 - name: solog-backend
   newName: sologregistry000807.azurecr.io/solog-backend
-  newTag: 3d2e1b138ab46e58d20dd212ecfa8a4f548c2df9
+  newTag: 1433f297df85fb01f135338df6fa4277e13096d5
