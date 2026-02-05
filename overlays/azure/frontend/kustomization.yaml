@@ -10,4 +10,4 @@ patches:
 images:
 - name: solog-frontend
   newName: sologregistry000807.azurecr.io/solog-frontend
-  newTag: 1433f297df85fb01f135338df6fa4277e13096d5
+  newTag: 763525fd09ac2e18ef106ff712138952fde6f2a1
