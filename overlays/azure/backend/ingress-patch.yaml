@@ -4,13 +4,11 @@ metadata:
   name: backend-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/enable-cors: "true"
 spec:
   rules:
-  - host: api.20.196.224.90.nip.io 
-    http:
+  - http:
       paths:
-      - path: /
+      - path: /api
         pathType: Prefix
         backend:
           service:
