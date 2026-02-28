@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - karpenter.yaml
   - karpenter-crd.yaml
-  - metric-server.yaml
+  - metrics-server.yaml
