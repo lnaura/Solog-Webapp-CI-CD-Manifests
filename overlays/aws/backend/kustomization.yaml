@@ -6,5 +6,5 @@ resources:
 
 images:
   - name: solog-backend
-    newName: <AWS_ACCOUNT_ID>.dkr.ecr.<REGION>.amazonaws.com/solog-backend
-    newTag: latest  # 이 태그는 CI가 나중에 업데이트합니다.
+    newName: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-backend
+    newTag: latest 

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: azure-root-app 
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/lnaura/Solog-Webapp-CI-CD-Manifests.git 
+    targetRevision: HEAD
+    path: applications/azure
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
