@@ -2,12 +2,12 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../../base/frontend
+- ../../../base/frontend
 
 patches:
-  - path: ingress-patch.yaml
+- path: ingress-patch.yaml
 
 images:
-  - name: solog-frontend
-    newName: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-frontend
-    newTag: latest 
+- name: solog-frontend
+  newName: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-frontend
+  newTag: bb906343c6f11397e4ea3dfa8c804ddf598c30a4
