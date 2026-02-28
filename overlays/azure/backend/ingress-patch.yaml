@@ -17,6 +17,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: solog-backend-service
+            name: solog-backend
             port:
-              number: 80
+              number: 8080
