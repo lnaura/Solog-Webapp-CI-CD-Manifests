@@ -10,4 +10,4 @@ patches:
 images:
 - name: solog-frontend
   newName: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-frontend
-  newTag: bb906343c6f11397e4ea3dfa8c804ddf598c30a4
+  newTag: 223dffb44909d3e58690d15a5dd3ed3b20908129
