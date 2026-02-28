@@ -43,6 +43,11 @@ spec:
                 secretKeyRef:
                   name: backend-secrets
                   key: GRAFANA_TOKEN
+            
+            - name: MANAGEMENT_HEALTH_DEFAULTS_ENABLED
+              value: "false"
+            - name: MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS
+              value: "never"
 
           livenessProbe:
             httpGet:
