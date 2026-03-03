@@ -7,4 +7,4 @@ resources:
 images:
 - name: solog-backend
   newName: 215572961831.dkr.ecr.ap-northeast-2.amazonaws.com/solog-backend
-  newTag: bb906343c6f11397e4ea3dfa8c804ddf598c30a4
+  newTag: fdf4091b88bff3880b50cd6718082e9488a482e1
