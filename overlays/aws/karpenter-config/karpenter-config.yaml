@@ -5,7 +5,7 @@ metadata:
   name: default
 spec:
   amiFamily: AL2
-  role: "KarpenterNodeRole-gitops-cluster-20260228023118641700000007"
+  role: "KarpenterNodeRole-gitops-cluster-20260303045400153900000006"
   subnetSelectorTerms:
     - tags:
         karpenter.sh/discovery: "gitops-cluster"

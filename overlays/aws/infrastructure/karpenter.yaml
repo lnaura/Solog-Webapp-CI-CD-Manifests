@@ -16,7 +16,7 @@ spec:
           create: true
           name: karpenter
           annotations:
-            eks.amazonaws.com/role-arn: "arn:aws:iam::215572961831:role/KarpenterController-2026022802402199560000001a"
+            eks.amazonaws.com/role-arn: "arn:aws:iam::215572961831:role/KarpenterController-2026030305033375010000001a"
         
         settings:
           clusterName: "gitops-cluster" 

@@ -12,15 +12,14 @@ spec:
     helm:
       values: |
         grafana:
-          adminPassword: "admin" # 테스트용 비밀번호
+          adminPassword: "admin"
           ingress:
             enabled: true
             ingressClassName: alb
             annotations:
               alb.ingress.kubernetes.io/scheme: internet-facing
               alb.ingress.kubernetes.io/target-type: ip
-            paths:
-              - /grafana
+            path: /
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
